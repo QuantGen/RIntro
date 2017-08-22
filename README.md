@@ -6,10 +6,10 @@
 -------------------------------------------------------------------------------------------
 
 <div id="installation" />
-## (1) The [R](https://www.r-project.org/)-software: Installation
+## (1) The [R-website](https://www.r-project.org/)
 
 
-                                                                                     [menu](#menu)   
+[menu](#menu)   
 
 
 
