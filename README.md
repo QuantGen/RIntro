@@ -1,7 +1,6 @@
 <div id="Outline" />
 
-### Brief Introduction to R
-
+### Outline
   * [Installation](#installation)  
   
   * [Types](#types)  
