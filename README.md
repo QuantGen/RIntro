@@ -27,7 +27,6 @@ You can install R and R-libraries and also have access to many materials and man
 
 
 
-
 **Topics you should be familiar with**
    * Installation [CRAN](https://cran.r-project.org/mirrors.html)
    * Types (boolean, integer, numeric, character, factors)
