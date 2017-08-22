@@ -3,10 +3,10 @@
 [1. Installation](#installation)
 
 
-(#installation)
+
 ## 1. Installation
 
-(#types)
+
 ## 2. Types
 
 
