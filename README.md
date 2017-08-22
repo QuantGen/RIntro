@@ -1,4 +1,5 @@
 <div id="Outline" />
+
 ### Brief Introduction to R
 
   * [Installation](#installation)  
