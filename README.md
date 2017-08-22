@@ -1,12 +1,12 @@
 ### Brief Introduction to R
 
+[1. Installation](#installation)
 
 
-
-(installation)
+(#installation)
 ## 1. Installation
 
-(types)
+(#types)
 ## 2. Types
 
 
