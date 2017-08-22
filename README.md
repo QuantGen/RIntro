@@ -1,5 +1,4 @@
 <div id="Outline" />
-
 ### Brief Introduction to R
 
   * [Installation](#installation)  
@@ -18,6 +17,7 @@ To install R simply follow the instructions under **Getting Started**. Once R is
 
 
 [Back to Outline](#Outline)
+
 -------------------------------------------------------------------------------------------
 
 <div id="types" />
