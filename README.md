@@ -1,6 +1,6 @@
 <div id="Outline" />
 
-### Outline
+## Outline
   * [Installation](#installation)  
   
   * [Types](#types)  
@@ -8,7 +8,7 @@
 -------------------------------------------------------------------------------------------
 <div id="installation" />
 
-#### (1) Installation
+### (1) Installation
 
 You can install R and R-libraries and also have access to many materials and manuals at the [R-website](https://www.r-project.org/). 
 
@@ -22,7 +22,7 @@ To install R simply follow the instructions under **Getting Started**. Once R is
 
 <div id="types" />
 
-#### (2) Types
+### (2) Types
 
 R support several types of variables, the basic ones are: `logical` (`TRUE`/`FALSE`), `integer`, `numeric` (double-precision, this is use for real numbers), `character` (these are used to store text), and `factors` (these are reserved for variables that can take on a limited set of values, e.g., ethnicity). The following example illustrates the creation and basic operations with this types of variables.
 
@@ -54,8 +54,8 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
   x="hello"
 ```
 
-[menu](menu)  
 
+[Back to Outline](#Outline)
 
 
 
