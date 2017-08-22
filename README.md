@@ -1,184 +1,55 @@
+<div id="menu" />
 ### Brief Introduction to R
+  * [Installation](#installation)   
+  * [Ordinary Least Squares I: Estimation](#OLS-I)
+  * [Ordinary Least Squares II: Inference](#OLS-II)
+  * [Non-linear regression using Splines](#splines)
+  * [Multi-core computing in R](#parallel)
+  * [Maximum Likelihood](#ML)
+  * [Simulation of random variables](#RV)
+  * [Monte Carlo Markov Chain Methods](#MCMC)
+  * [Cross-Validation](#CV)
+  * [Penalised Regressions](#penalised)
+-------------------------------------------------------------------------------------------
+
+<div id="installation" />
+## (1) The [R](https://www.r-project.org/)-software: Installation
 
 
-## Topics
-----------------------------------------------
-[1. Installation](#Installation)
-
--------------------------------------------
-
-
-```r
-h2=c(.1,.05,.01)
-cols=c(4,2,1)
-
-for(i in 1:length(h2)){
-   load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-   if(i==1){
-   		Y=matrix(ncol=length(h2),nrow=ncol(reject))
-   		x=as.integer(colnames(reject))
-   		colnames(Y)=h2
-   		rownames(Y)=x
-   		plot(numeric()~numeric(),xlim=range(x),ylim=c(.045,.1),ylab='Rejection Rate',xlab='Lag between markers (# of SNPs)')
-   		abline(h=.05,lty=2)
-   }
-   Y[,i]=colMeans(reject,na.rm=T)
-   lines(x=x,y=Y[,i],col=cols[i])
-   points(x=x,y=Y[,i],col=cols[i])
-   text(x=3500,y=c(.095,.092,.089)[i],label=paste0('h2=',h2[i]),col=cols[i])
-
-}
-
-i=1
-load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-
-
-for(i in 1:length(h2)){
-   load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-   if(i==1){
-   		Y=matrix(ncol=length(h2),nrow=ncol(reject))
-   		x=as.integer(colnames(reject))
-   		colnames(Y)=h2
-   		rownames(Y)=x
-   		plot(numeric()~numeric(),xlim=range(x),ylim=c(.045,.1),ylab='Rejection Rate',xlab='Lag between markers (# of SNPs)')
-   		abline(h=.05,lty=2)
-   }
-   Y[,i]=colMeans(reject,na.rm=T)
-   lines(x=x,y=Y[,i],col=cols[i])
-   points(x=x,y=Y[,i],col=cols[i])
-   text(x=3500,y=c(.095,.092,.089)[i],label=paste0('h2=',h2[i]),col=cols[i])
-
-}
-
-
-h2=c(.1,.05,.01)
-cols=c(4,2,1)
-
-for(i in 1:length(h2)){
-   load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-   if(i==1){
-   		Y=matrix(ncol=length(h2),nrow=ncol(reject))
-   		x=as.integer(colnames(reject))
-   		colnames(Y)=h2
-   		rownames(Y)=x
-   		plot(numeric()~numeric(),xlim=range(x),ylim=c(.045,.1),ylab='Rejection Rate',xlab='Lag between markers (# of SNPs)')
-   		abline(h=.05,lty=2)
-   }
-   Y[,i]=colMeans(reject,na.rm=T)
-   lines(x=x,y=Y[,i],col=cols[i])
-   points(x=x,y=Y[,i],col=cols[i])
-   text(x=3500,y=c(.095,.092,.089)[i],label=paste0('h2=',h2[i]),col=cols[i])
-
-}
-
-i=1
-load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-
-
-for(i in 1:length(h2)){
-   load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-   if(i==1){
-   		Y=matrix(ncol=length(h2),nrow=ncol(reject))
-   		x=as.integer(colnames(reject))
-   		colnames(Y)=h2
-   		rownames(Y)=x
-   		plot(numeric()~numeric(),xlim=range(x),ylim=c(.045,.1),ylab='Rejection Rate',xlab='Lag between markers (# of SNPs)')
-   		abline(h=.05,lty=2)
-   }
-   Y[,i]=colMeans(reject,na.rm=T)
-   lines(x=x,y=Y[,i],col=cols[i])
-   points(x=x,y=Y[,i],col=cols[i])
-   text(x=3500,y=c(.095,.092,.089)[i],label=paste0('h2=',h2[i]),col=cols[i])
-
-}
-
-
-h2=c(.1,.05,.01)
-cols=c(4,2,1)
-
-for(i in 1:length(h2)){
-   load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-   if(i==1){
-   		Y=matrix(ncol=length(h2),nrow=ncol(reject))
-   		x=as.integer(colnames(reject))
-   		colnames(Y)=h2
-   		rownames(Y)=x
-   		plot(numeric()~numeric(),xlim=range(x),ylim=c(.045,.1),ylab='Rejection Rate',xlab='Lag between markers (# of SNPs)')
-   		abline(h=.05,lty=2)
-   }
-   Y[,i]=colMeans(reject,na.rm=T)
-   lines(x=x,y=Y[,i],col=cols[i])
-   points(x=x,y=Y[,i],col=cols[i])
-   text(x=3500,y=c(.095,.092,.089)[i],label=paste0('h2=',h2[i]),col=cols[i])
-
-}
-
-i=1
-load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-
-
-for(i in 1:length(h2)){
-   load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-   if(i==1){
-   		Y=matrix(ncol=length(h2),nrow=ncol(reject))
-   		x=as.integer(colnames(reject))
-   		colnames(Y)=h2
-   		rownames(Y)=x
-   		plot(numeric()~numeric(),xlim=range(x),ylim=c(.045,.1),ylab='Rejection Rate',xlab='Lag between markers (# of SNPs)')
-   		abline(h=.05,lty=2)
-   }
-   Y[,i]=colMeans(reject,na.rm=T)
-   lines(x=x,y=Y[,i],col=cols[i])
-   points(x=x,y=Y[,i],col=cols[i])
-   text(x=3500,y=c(.095,.092,.089)[i],label=paste0('h2=',h2[i]),col=cols[i])
-
-}
-
-
-h2=c(.1,.05,.01)
-cols=c(4,2,1)
-
-for(i in 1:length(h2)){
-   load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-   if(i==1){
-   		Y=matrix(ncol=length(h2),nrow=ncol(reject))
-   		x=as.integer(colnames(reject))
-   		colnames(Y)=h2
-   		rownames(Y)=x
-   		plot(numeric()~numeric(),xlim=range(x),ylim=c(.045,.1),ylab='Rejection Rate',xlab='Lag between markers (# of SNPs)')
-   		abline(h=.05,lty=2)
-   }
-   Y[,i]=colMeans(reject,na.rm=T)
-   lines(x=x,y=Y[,i],col=cols[i])
-   points(x=x,y=Y[,i],col=cols[i])
-   text(x=3500,y=c(.095,.092,.089)[i],label=paste0('h2=',h2[i]),col=cols[i])
-
-}
-
-i=1
-load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-
-
-for(i in 1:length(h2)){
-   load(paste0('../output/pc_adj/h2_',h2[i],'/result50K.RData'))
-   if(i==1){
-   		Y=matrix(ncol=length(h2),nrow=ncol(reject))
-   		x=as.integer(colnames(reject))
-   		colnames(Y)=h2
-   		rownames(Y)=x
-   		plot(numeric()~numeric(),xlim=range(x),ylim=c(.045,.1),ylab='Rejection Rate',xlab='Lag between markers (# of SNPs)')
-   		abline(h=.05,lty=2)
-   }
-   Y[,i]=colMeans(reject,na.rm=T)
-   lines(x=x,y=Y[,i],col=cols[i])
-   points(x=x,y=Y[,i],col=cols[i])
-   text(x=3500,y=c(.095,.092,.089)[i],label=paste0('h2=',h2[i]),col=cols[i])
-
-}
+                                                                                     [menu](#menu)   
 
 
 
-```
+
+
+
+
+
+
+
+
+
+
+
+**Topics you should be familiar with**
+   * Installation [CRAN](https://cran.r-project.org/mirrors.html)
+   * Types (boolean, integer, numeric, character, factors)
+   * Variables and simple operations
+   * Arrays 
+   	* Vectors
+   	* Matrices
+   	* Multi-dimensional arrays
+	* Lists
+	* Data Frames	
+   * Conditional statements
+   * For and while loops
+   * I/O
+	* `read.table`  and `write.table`
+	* `load` and `save`
+	* `dput` and `dget`
+	* `scan` and `wirte`
+	* `readBin` and `writeBin`
+   * Functions 
 
 ## 1. Installation
 
