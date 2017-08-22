@@ -1,15 +1,8 @@
 <div id="menu" />
 ### Brief Introduction to R
+
   * [Installation](#installation)   
-  * [Ordinary Least Squares I: Estimation](#OLS-I)
-  * [Ordinary Least Squares II: Inference](#OLS-II)
-  * [Non-linear regression using Splines](#splines)
-  * [Multi-core computing in R](#parallel)
-  * [Maximum Likelihood](#ML)
-  * [Simulation of random variables](#RV)
-  * [Monte Carlo Markov Chain Methods](#MCMC)
-  * [Cross-Validation](#CV)
-  * [Penalised Regressions](#penalised)
+
 -------------------------------------------------------------------------------------------
 
 <div id="installation" />
