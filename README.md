@@ -8,7 +8,7 @@
 
 <div id="installation" />
 
-## (1) Installation
+#### (1) Installation
 
 You can install R and R-libraries and also have access to many materials and manuals at the [R-website](https://www.r-project.org/). 
 
