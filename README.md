@@ -16,7 +16,7 @@ You can install R and R-libraries and also have access to many materials and man
 To install R simply follow the instructions under **Getting Started**. Once R is installed, you should have the R-icon on your programs. Click on the icon to open the R-console.
 
 
-[menu](menu)   
+[menu](######menu)   
 -------------------------------------------------------------------------------------------
 
 <div id="types" />
