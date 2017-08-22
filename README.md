@@ -3,7 +3,7 @@
 
 ## Topics
 ----------------------------------------------
-[1. Installation](###installation)
+[1. Installation](#Installation)
 
 -------------------------------------------
 
@@ -182,7 +182,7 @@ for(i in 1:length(h2)){
 
 ## 1. Installation
 
-[menu](#Topics)
+[menu](# Topics)
 
 
 ## 2. Types
