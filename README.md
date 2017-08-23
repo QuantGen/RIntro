@@ -6,7 +6,6 @@
   * [Basic operations with numbers](#basic-operations) 
   * [Vectors](#vectors) 
   * [Matrices](#matrices)
-  * [Multi-dimensional arrays](#multidimensional) 
   * [Data frames](#data.frames) 
   * [Reading/writing ASCII files](#read-write) 
   * [Plots](#plots) 
@@ -35,7 +34,7 @@ To install R, follow the instructions under **Getting Started**. Once R is insta
 
 <div id="types" />
 
-### (2) Types
+### Types
 
 R support several types of variables, the basic ones are: `logical` (`TRUE`/`FALSE`), `integer`, `numeric` (double-precision, this is use for real numbers), `character` (these are used to store text), and `factors` (these are reserved for variables that can take on a limited set of values, e.g., ethnicity). The following example illustrates the creation and basic operations with this types of variables.
 
@@ -71,7 +70,7 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
 
 <div id="basic-operations" />
 
-### (3) Basic Operations with `numeric` and `integer`
+### Basic Operations with `numeric` and `integer`
 
 ```{r}
  x=2
@@ -87,15 +86,15 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
 
 <div id="vectors" />
 
-### (4) Vectors
+### Vectors
 
 
 [Back to Outline](#Outline)
 
 
-<div id="mtrices" />
+<div id="matrices" />
 
-### (5) Matrices
+### Matrices
 
 
 [Back to Outline](#Outline)
@@ -103,43 +102,32 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
 
 <div id="multidimensional" />
 
-### (6) Multidimensonal (homogenous) arrays
-
-
-[Back to Outline](#Outline)
 
 
 <div id="data.frame" />
 
-### (7) Data Frames
+### Data Frames
 
 [Back to Outline](#Outline)
 
-
-
-<div id="lists" />
-
-### (8) Lists
-
-[Back to Outline](#Outline)
 
 
 <div id="read-write" />
 
-### (9) Reading/writing ASCII files
+### Reading/writing ASCII files
 
 [Back to Outline](#Outline)
 
 <div id="plots" />
 
-### (10) Plots
+### Plots
 
 [Back to Outline](#Outline)
 
 
 <div id="conditionals" />
 
-### (11) Conditional Statments
+### Conditional Statments
 
 [Back to Outline](#Outline)
 
