@@ -15,9 +15,7 @@
   * [Funcitons](#functions) 
   * [Libraries](#libraries) 
     
-    
-    
-    [R-CRAN](https://cran.r-project.org/)
+
 -------------------------------------------------------------------------------------------
 
 
