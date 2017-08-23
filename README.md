@@ -16,11 +16,6 @@
   * [Libraries](#libraries) 
     
 -------------------------------------------------------------------------------------------
-  [Installation](#installation)     [Types](#types)   [Basic operations with numbers](#basic-operations)  [Vectors](#vectors) 
-  [Matrices](#matrices)  [Multi-dimensional arrays](#multidimensional)   [Data frames](#data.frames) 
-  [Reading/writing ASCII files](#read-write)  [Plots](#plots)   [Conditional statements](#conditionals)  [Loops](#loops) 
-  [Funcitons](#functions)   [Libraries](#libraries) 
--------------------------------------------------------------------------------------------
 
 
 <div id="installation" />
