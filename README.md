@@ -1,10 +1,32 @@
 <div id="Outline" />
 
 ## Outline
-  * [Installation](#installation)  
+  * [1. Installation](#installation)  
   
-  * [Types](#types)  
-
+  * [2. Types](#types) 
+  
+  * [3. Basic operations with numbers](#basic-operations) 
+  
+  * [4. Vectors](#vectors) 
+    
+  * [5. Matrices](#matrices) 
+    
+  * [6. Milti-dimensional arrays](#multidimensional) 
+    
+  * [7. Data frames](#data.frames) 
+   
+  * [8. Reading/writing ASCII files](#read-write) 
+    
+  * [9. Plots](#plots) 
+    
+  * [10. Conditional statements](#conditionals) 
+    
+  * [11. Loops](#loops) 
+    
+  * [12. Funcitons](#functions) 
+    
+  * [13. Libraries](#libraries) 
+    
 -------------------------------------------------------------------------------------------
 <div id="installation" />
 
@@ -79,4 +101,82 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
 
 [Back to Outline](#Outline)
 
+
+<div id="mtrices" />
+
+### (5) Matrices
+
+
+[Back to Outline](#Outline)
+
+
+<div id="multidimensional" />
+
+### (6) Multidimensonal (homogenous) arrays
+
+
+[Back to Outline](#Outline)
+
+
+<div id="data.frame" />
+
+### (7) Data Frames
+
+[Back to Outline](#Outline)
+
+
+
+<div id="lists" />
+
+### (8) Lists
+
+[Back to Outline](#Outline)
+
+
+<div id="read-write" />
+
+### (9) Reading/writing ASCII files
+
+[Back to Outline](#Outline)
+
+<div id="plots" />
+
+### (10) Plots
+
+[Back to Outline](#Outline)
+
+
+<div id="conditionals" />
+
+### (11) Conditional Statments
+
+[Back to Outline](#Outline)
+
+
+<div id="loops" />
+
+### (12) Loops
+
+[Back to Outline](#Outline)
+
+
+<div id="functions" />
+
+### (13) Functions
+
+[Back to Outline](#Outline)
+
+
+<div id="libraries" />
+
+### (14) Libraries
+
+[Back to Outline](#Outline)
+
+
+<div id="distributions" />
+
+### (15) Distributions
+
+[Back to Outline](#Outline)
 
