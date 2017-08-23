@@ -12,7 +12,7 @@
 
 You can install R and R-libraries and also have access to many materials and manuals at the [R-website](https://www.r-project.org/). 
 
-To install R simply follow the instructions under **Getting Started**. Once R is installed, you should have the R-icon on your programs. Click on the icon to open the R-console.
+To install R, follow the instructions under **Getting Started**. Once R is installed, you should have the R-icon on your programs. Click on the icon to open the R-console.
 
 
 
@@ -26,7 +26,7 @@ To install R simply follow the instructions under **Getting Started**. Once R is
 
 R support several types of variables, the basic ones are: `logical` (`TRUE`/`FALSE`), `integer`, `numeric` (double-precision, this is use for real numbers), `character` (these are used to store text), and `factors` (these are reserved for variables that can take on a limited set of values, e.g., ethnicity). The following example illustrates the creation and basic operations with this types of variables.
 
-```r
+```{r}
   # numeric
   x=1.1
   str(x)
@@ -54,11 +54,29 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
   x="hello"
 ```
 
-
 [Back to Outline](#Outline)
 
+<div id="basic-operations" />
+
+### (3) Basic Operations with `numeric` and `integer`
+
+```{r}
+ x=2
+ x+10
+ x-10
+ x*4
+ x^2
+ sqrt(x)
+ log(x) # natural log
+ log(100,base=10)
+```
+[Back to Outline](#Outline)
+
+<div id="vectors" />
+
+### (4) Vectors
 
 
-
+[Back to Outline](#Outline)
 
 
