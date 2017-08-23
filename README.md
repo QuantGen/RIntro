@@ -1,10 +1,8 @@
 <div id="Outline" />
 
 ## Outline
-  * [1. Installation](#installation)  
-  
+  * [1. Installation](#installation)    
   * [2. Types](#types) 
-  
   * [3. Basic operations with numbers](#basic-operations) 
   
   * [4. Vectors](#vectors) 
