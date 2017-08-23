@@ -1,31 +1,28 @@
 <div id="Outline" />
 
 ## Outline
-  * [1. Installation](#installation)    
-  * [2. Types](#types) 
-  * [3. Basic operations with numbers](#basic-operations) 
-  
-  * [4. Vectors](#vectors) 
-    
-  * [5. Matrices](#matrices) 
-    
-  * [6. Milti-dimensional arrays](#multidimensional) 
-    
-  * [7. Data frames](#data.frames) 
-   
-  * [8. Reading/writing ASCII files](#read-write) 
-    
-  * [9. Plots](#plots) 
-    
-  * [10. Conditional statements](#conditionals) 
-    
-  * [11. Loops](#loops) 
-    
-  * [12. Funcitons](#functions) 
-    
-  * [13. Libraries](#libraries) 
+  * [Installation](#installation)    
+  * [Types](#types) 
+  * [Basic operations with numbers](#basic-operations) 
+  * [Vectors](#vectors) 
+  * [Matrices](#matrices)
+  * [Multi-dimensional arrays](#multidimensional) 
+  * [Data frames](#data.frames) 
+  * [Reading/writing ASCII files](#read-write) 
+  * [Plots](#plots) 
+  * [Conditional statements](#conditionals)
+  * [Loops](#loops) 
+  * [Funcitons](#functions) 
+  * [Libraries](#libraries) 
     
 -------------------------------------------------------------------------------------------
+  [Installation](#installation)     [Types](#types)   [Basic operations with numbers](#basic-operations)  [Vectors](#vectors) 
+  [Matrices](#matrices)  [Multi-dimensional arrays](#multidimensional)   [Data frames](#data.frames) 
+  [Reading/writing ASCII files](#read-write)  [Plots](#plots)   [Conditional statements](#conditionals)  [Loops](#loops) 
+  [Funcitons](#functions)   [Libraries](#libraries) 
+-------------------------------------------------------------------------------------------
+
+
 <div id="installation" />
 
 ### (1) Installation
