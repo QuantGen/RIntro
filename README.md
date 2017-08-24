@@ -323,8 +323,6 @@ You can easily create your own functions. Remember, that in the least-squares (O
   myOLS(x=pred,y=response)
   
 ```
-
-```
 [Back to Outline](#Outline)
 
 
