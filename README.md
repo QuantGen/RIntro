@@ -89,6 +89,30 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
 
 ### Vectors
 
+The following code shows how to create vectors, subset (i.e., extract single or multiple elements) and modify (repleacement) them.
+
+```{R}
+  x=c(1,10,15,100)
+  x[3] # extracting one element
+  x[3]=99 # replacing one element
+  x[-3] # `-` can be used to extract all but some entries
+  
+  # Sequence
+  x=1:10 # creates a sequence from 1:10
+  x
+  x[3]=1000
+  x
+  
+  # Indexing and replacement can also be done with TRUE/FALSE
+  
+  x=1:4
+  x[c(TRUE,FALSE,FALSE,FALSE)]
+ 
+  # Vectors can be of any type
+  x=c("a","b","hello")
+  x
+  
+```
 
 [Back to Outline](#Outline)
 
@@ -97,6 +121,13 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
 
 ### Matrices
 
+A matrix is a two dimensional array that holds values of the same type (e.g., numeric, logical). The following code illustrates how to create, subset and modify a matrix. Matrix operations will be covered in the course.
+
+
+```{R}
+
+
+```
 
 [Back to Outline](#Outline)
 
