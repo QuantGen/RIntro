@@ -39,7 +39,7 @@ To install R, follow the instructions under **Getting Started**. Once R is insta
 
 R support several types of variables, the basic ones are: `logical` (`TRUE`/`FALSE`), `integer`, `numeric` (double-precision, this is use for real numbers), `character` (these are used to store text), and `factors` (these are reserved for variables that can take on a limited set of values, e.g., ethnicity). The following example illustrates the creation and basic operations with this types of variables.
 
-```{r}
+```r
   # numeric
   x=1.1
   str(x)
@@ -73,7 +73,7 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
 
 ### Basic Operations with `numeric` and `integer`
 
-```{r}
+```r
  x=2
  x+10
  x-10
@@ -91,7 +91,7 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
 
 The following code shows how to create vectors, subset (i.e., extract single or multiple elements) and modify (repleacement) them.
 
-```{R}
+```r
   x=c(1,10,15,100)
   x[3] # extracting one element
   x[3]=99 # replacing one element
@@ -124,8 +124,7 @@ The following code shows how to create vectors, subset (i.e., extract single or 
 A matrix is a two dimensional array that holds values of the same type (e.g., numeric, logical). The following code illustrates how to create, subset and modify a matrix. Matrix operations will be covered in the course.
 
 
-```{R}
-
+```r
 
 ```
 
