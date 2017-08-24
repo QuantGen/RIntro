@@ -211,7 +211,7 @@ Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`
 <div id="plots" />
 
 ### Plots
-```
+```r
    barplot(table(DATA$sex))
    hist(DATA$age)
    boxplot(height~sex,data=DATA)
