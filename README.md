@@ -162,8 +162,8 @@ Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`
    N=100
    x1=sample(c("F","M"),size=N,replace=T)
    x2=runif(min=22,max=35,n=N) # samples 10 values from a uniform distribution with support on [40,60]
-   y=ifelse(sex=="F",170,175)+rnorm(n=N,sd=sqrt(40)) # random normal with two different means for male and female
-   DATA=data.frame(sex=x1,age=x2,height=y)
+   DATA=data.frame(sex=x1,age=x2)
+   DATA$height=ifelse(DATA$sex=="F",170,175)+rnorm(n=N,sd=sqrt(40)) # adding a new variable can be done this way
    
    head(DATA)    # prints the first rows of the data to the screen
    tail(DATA)    # prints the last rows of the data to the screen
