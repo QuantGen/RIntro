@@ -125,34 +125,90 @@ A matrix is a two dimensional array that holds values of the same type (e.g., nu
 
 
 ```r
+  x1=1:10
+  x2=11:20
+  x3=21:30
+  
+  X=cbind(x1,x2,x3) # Binds columns
+  dim(X)
+  nrow(X)
+  ncol(X)
+  X
+  
+  ## Subseting 
+  X[1,] # returns the first row
+  X[,2] # returns the first column
+  X[1:2,2:3] # returns the block defined by rows 1 and 2 and columns 2 and 3
+  
+  ## Replacment
+  X[2,3]=1000
+  X
+  
+  ## Try: Z=rbind(x1,x2,x3); dim(Z)
 
+ 
 ```
 
 [Back to Outline](#Outline)
-
-
-<div id="multidimensional" />
-
 
 
 <div id="data.frame" />
 
 ### Data Frames
 
+Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`, `character`). In statistics often we need to use data tables that store variables of different types. For instance, we may want to store in a single data table: sex ("M"/"F" will be `character`, age and weight (both `numeric`). We can do this using data frames. Strictily speaking `data.frames` are `lists`; however, unlike the general list, `data.frames` are two dimensional arrays, pretty much like matrices, with the flexibility that they can store different types in the columns.
+
 [Back to Outline](#Outline)
 
-
+```r
+   N=20
+   x1=sample(c("F","M"),size=N,replace=T)
+   x2=runif(min=22,max=35,n=N) # samples 10 values from a uniform distribution with support on [40,60]
+   y=ifelse(sex=="F",170,175)+rnorm(n=N,sd=sqrt(40)) # random normal with two different means for male and female
+   DATA=data.frame(sex=sex,age=age,height=height)
+   
+   head(DATA)    # prints the first rows of the data to the screen
+   tail(DATA)    # prints the last rows of the data to the screen
+   str(DATA)     # tells you the strcture (class, dimensions) of the object
+   fix(DATA)     # shows the data frame in a spread-sheet-like fashion
+   summary(DATA) # most objects in R have a summary method, note summaries depend upon the type.
+   
+   ## Indexing
+   
+   DATA[,1]
+   DATA$sex  # you can index by variable name, same for replacement.
+   
+   DATA[1,1]
+   DATA$sex[1]
+   
+```
 
 <div id="read-write" />
 
-### Reading/writing ASCII files
-
+### Writing/reading ASCII files
+```R
+  # Writing
+   write.table(DATA,file='DATA.txt') # writes the data to an ASCII file
+   list.files(pattern='.txt') # list the files in the current folder having *.txt in the name.
+  
+  # Reading
+   DATA2=read.table('DATA.txt',header=T) # you can add sep="," or sep"\t" for comma and tab-spearated files, respectively
+   head(DATA)
+   head(DATA2)
+   
+```
 [Back to Outline](#Outline)
 
 <div id="plots" />
 
 ### Plots
-
+```
+   barplot(table(DATA$sex))
+   hist(DATA$age)
+   boxplot(height~sex,data=DATA)
+   plot(height~age,data=DATA)
+   
+```
 [Back to Outline](#Outline)
 
 
