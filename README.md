@@ -101,7 +101,6 @@ The following code shows how to create vectors, subset (i.e., extract single or 
   x
   
   # Indexing and replacement can also be done with TRUE/FALSE
-  
   x=1:4
   x[c(TRUE,FALSE,FALSE,FALSE)]
  
@@ -134,10 +133,10 @@ A matrix is a two dimensional array that holds values of the same type (e.g., nu
   
   ## Subseting 
   X[1,] # returns the first row
-  X[,2] # returns the first column
+  X[,2] # returns the second column
   X[1:2,2:3] # returns the block defined by rows 1 and 2 and columns 2 and 3
   
-  ## Replacment
+  ## Replacement
   X[2,3]=1000
   X
   
@@ -160,7 +159,7 @@ Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`
 ```r
    N=100
    x1=sample(c("F","M"),size=N,replace=T)
-   x2=runif(min=22,max=35,n=N) # samples 10 values from a uniform distribution with support on [40,60]
+   x2=runif(min=25,max=60,n=N) # samples 10 values from a uniform distribution with support on [25,60]
    DATA=data.frame(sex=x1,age=x2)
    DATA$height=ifelse(DATA$sex=="F",170,175)+rnorm(n=N,sd=sqrt(40)) # adding a new variable can be done this way
    
@@ -355,6 +354,17 @@ Now that the package is installed you can load it into your environment.
 <div id="distributions" />
 
 ### Distributions
+Package **stats** already included in R contains functions for *density*, *cumulative distribution function*, *quantile function* and *random variate generation* for many standard probability distributions. 
+
+```R
+# Density for normal distrubution
+
+# Cumulative distribution
+
+# Quantile
+
+# Random variable
+```
 
 [Back to Outline](#Outline)
 
