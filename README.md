@@ -8,26 +8,24 @@
   * [Matrices](#matrices)
   * [Data frames](#data.frames) 
   * [Reading/writing ASCII files](#read-write) 
+  * [Descriptive statistics](#descriptives)
   * [Plots](#plots) 
   * [Conditional statements](#conditionals)
   * [Loops](#loops) 
-  * [Funcitons](#functions) 
+  * [Functions](#functions) 
   * [Libraries](#libraries) 
     
-
 -------------------------------------------------------------------------------------------
 
 ## [Gout Data Set](https://github.com/gdlc/STT465/blob/master/gout.txt)
 
 <div id="installation" />
 
-### (1) Installation
+### Installation
 
 You can install R and R-libraries and also have access to many materials and manuals at the [R-website](https://www.r-project.org/). 
 
 To install R, follow the instructions under **Getting Started**. Once R is installed, you should have the R-icon on your programs. Click on the icon to open the R-console.
-
-
 
 [Back to Outline](#Outline)
 
@@ -173,8 +171,7 @@ Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`
    fix(DATA)     # shows the data frame in a spread-sheet-like fashion
    summary(DATA) # most objects in R have a summary method, note summaries depend upon the type.
    
-   ## Indexing
-   
+   ## Indexing  
    DATA[,1]
    DATA$sex  # you can index by variable name, same for replacement.
    
@@ -198,6 +195,18 @@ Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`
    
 ```
 [Back to Outline](#Outline)
+
+<div id="descriptives" />
+
+### Descriptive Statistics
+
+```R
+   summary(DATA$age)
+   table(DATA$sex)
+   quantile(DATA$age,p=.08)
+   isTall<-ifelse(DATA$height>median(DATA$height),">median","<median")
+   table(DATA$sex,isTall)
+```
 
 <div id="plots" />
 
