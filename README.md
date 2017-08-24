@@ -14,6 +14,7 @@
   * [Loops](#loops) 
   * [Functions](#functions) 
   * [Libraries](#libraries) 
+  * [Distributions](#distributions)
     
 -------------------------------------------------------------------------------------------
 
