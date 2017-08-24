@@ -161,11 +161,11 @@ Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`
 [Back to Outline](#Outline)
 
 ```r
-   N=20
+   N=100
    x1=sample(c("F","M"),size=N,replace=T)
    x2=runif(min=22,max=35,n=N) # samples 10 values from a uniform distribution with support on [40,60]
    y=ifelse(sex=="F",170,175)+rnorm(n=N,sd=sqrt(40)) # random normal with two different means for male and female
-   DATA=data.frame(sex=sex,age=age,height=height)
+   DATA=data.frame(sex=x1,age=x2,height=y)
    
    head(DATA)    # prints the first rows of the data to the screen
    tail(DATA)    # prints the last rows of the data to the screen
@@ -207,7 +207,7 @@ Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`
    hist(DATA$age)
    boxplot(height~sex,data=DATA)
    plot(height~age,data=DATA)
-   
+   plot(density(DATA$height))
 ```
 [Back to Outline](#Outline)
 
@@ -215,34 +215,140 @@ Vectors and matrices can store data of a single type (e.g., `numeric`, `integer`
 <div id="conditionals" />
 
 ### Conditional Statments
+In programing conditional statements can be used to execute one type of code or another depending on a conditon.
 
+```R
+ x=1
+ y=2
+ 
+ if(x>y){
+   print("X is greater than Y!")
+ }
+ 
+ ## IF-ELSE
+ if(x>y){
+   print("X is greater than Y!")
+ }else{
+   print("Y is greater than X!")
+ }
+
+ ## IF-ELSE
+ x=3
+ if(x>y){
+   print("X is greater than Y!")
+ }else{
+   print("Y is greater than X!")
+ }
+ 
+ 
+ ## We can evaluate multiple conditions at a time by nesting if statments or by evaluating them jointly
+ 
+ x=TRUE
+ y=FALSE
+ 
+ if(x){
+  if(y){
+    print("Both X and Y are TRUE!")
+  }else{
+    print("X is TRUE and Y is FALSE")
+  }
+ }else{
+   if(y){
+    print("X is FALSE and Y is TRUE")
+   }else{
+    print("Both X and Y are FALSE")
+   }
+ }
+
+ ## Alternatively
+ 
+ if(x&y){ print("Both X and Y are TRUE") }
+ if(x&!y){ print("X is TRUE and Y is FALSE") }
+ if((!x)&y){ print("X is FALSE and Y is TRUE") }
+ if((!x)&(!y)){ print("Both X and Y are FALSE") }
+ 
+```
 [Back to Outline](#Outline)
 
 
 <div id="loops" />
 
 ### (12) Loops
+ In many applications we need to repeat a task a fixed numer of times or until somthing happen. For this you can use the `for` and `while` loops.
 
+```r
+ for(i in 1:10){
+   print(i)
+ }
+ 
+ ## We can iterate over any vector
+ for(i in c("a","b","zzz")){
+    print(i)
+ }
+
+ ## While loop
+ x=0
+ while(x<=10){
+  x=x+1
+  print(x)
+ }
+```
 [Back to Outline](#Outline)
 
 
 <div id="functions" />
 
 ### (13) Functions
+A function takes on a numbrer of arguments, carries out some computations and (often) returns an object. The `sin`, `cos` , `log` and `summary` are examples of functions that return a value.
 
+```R
+   x=100
+   sin(x)
+   cos(x)
+```
+
+You can easily create your own functions. Remember, that in the least-squares (OLS=Ordinary Least Squares) estimate of a regression coefficient of simple linear regerssion equals the covariance between `x` and `y` divided by the variance of `x`. The following example returns OLS estimates of the intercept and regression coefficient in a simple linear regression.
+
+```R
+  myOLS=function(x,y){
+    b=cov(x,y)/var(x)
+    a=mean(y)-mean(x)*b
+    return(c(a,b))
+  }
+  
+  # simulating a simple data set
+  pred=rnorm(100)
+  response=100+.5*pred + rnorm(100)
+  
+  myOLS(x=pred,y=response)
+  
+```
+
+```
 [Back to Outline](#Outline)
 
 
 <div id="libraries" />
 
-### (14) Libraries
+### Libraries
+The basic installation of R comes with several functions for computation, basic statistical analyses, descriptive statistics, etc. Specialized code is contributed by develpers under the form of libraries. To use a library you first need to install it and then load it into the environment.
 
+```R
+   install.packages(pkg='BGLR', repos='https://cran.r-project.org/') # installs BGLR package from the CRAN repository.
+```
+
+Now that the package is installed you can load it into your environment.
+
+```R
+  library(BGLR)
+  
+```
 [Back to Outline](#Outline)
 
 
 <div id="distributions" />
 
-### (15) Distributions
+### Distributions
 
 [Back to Outline](#Outline)
 
