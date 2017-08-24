@@ -51,10 +51,10 @@ R support several types of variables, the basic ones are: `logical` (`TRUE`/`FAL
   # logical
   x= 1.1 >2 
   x
-  type(x)
+  class(x)
   !x  # exclamation sign returns the negative of the logical value
-  is.true(x)
-  is.false(!x)
+  isTRUE(x)
+  isTRUE(!x)
   
   # character
   x='hello' # you can use either single or double quates to create a character
