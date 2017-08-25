@@ -355,16 +355,29 @@ Now that the package is installed you can load it into your environment.
 <div id="distributions" />
 
 ### Distributions
-Package **stats** already included in R contains functions for *density*, *cumulative distribution function*, *quantile function* and *random variate generation* for many standard probability distributions. 
+Package **stats** already included in R contains functions for *probability function*, *cumulative distribution function*, *quantile function* and *random variable generation* for many probability distributions. Functions consists of a prefix followed by the root name of the distribution.
+
+** Probability function **. Prefix *p*
+Calculates the probability density function (p.d.f) for continuos distributions, *f(x)*, and the probability mass function (p.m.f) for discrete distributions, *f(x)=P(X=x)*.
 
 ```R
-# Density for normal distrubution
+```
+** Cumulative distribution **. Prefix *p*
+Calculates the cummulative distribution function (c.d.f.) for the random variable *X*
+*F(x) = P(X <= x)* 
+```R
+pnorm(27.4,30,10) # P(X <= 27.4) when X is normal with mean 30 and standard deviation 10. 
+pchisq(8.2,12) # P(X <= 8.2) when X is chi-square with 12 d.f. 
+```
 
-# Cumulative distribution
+** Quantile **
+```R
 
-# Quantile
+```
 
-# Random variable
+** Random variable **
+```R
+
 ```
 
 [Back to Outline](#Outline)
