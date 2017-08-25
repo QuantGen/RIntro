@@ -281,7 +281,7 @@ In programing conditional statements can be used to execute one type of code or 
 
 <div id="loops" />
 
-### (12) Loops
+### Loops
  In many applications we need to repeat a task a fixed numer of times or until somthing happen. For this you can use the `for` and `while` loops.
 
 ```r
@@ -306,7 +306,7 @@ In programing conditional statements can be used to execute one type of code or 
 
 <div id="functions" />
 
-### (13) Functions
+### Functions
 A function takes on a numbrer of arguments, carries out some computations and (often) returns an object. The `sin`, `cos` , `log` and `summary` are examples of functions that return a value.
 
 ```R
@@ -370,7 +370,7 @@ Calculates the probability density function (p.d.f) for continuos distributions,
 dbinom(6,10,0.2)+dbinom(7,10,0.2)+dbinom(8,10,0.2)+dbinom(9,10,0.2)+dbinom(10,10,0.2)
 
 # For a continuous distribution (e.g.,normal distribution)
-# Example. In a certain population, BMI has a normal distribution with mean=29 and sd=6
+# Example. In a certain population, BMI has a normal distribution with mean=27.5 and sd=5
 x <- seq(12.5,42.5,length=1000)
 y <- dnorm(x,mean=27.5, sd=5)
 plot(x,y,type="l",main='Normal distribution with mean=27.5 and sd=5',ylab='f(x)')
@@ -390,17 +390,25 @@ pbinom(5,10,0.2,lower.tail=FALSE)
 
 # Normal distribution
 # In our BMI example, a person is declared obese if her/his BMI is greater or equal than 30.
-1-pnorm(30,27.5,6) # Probability that a randomly choosen person is obese
+1-pnorm(30,27.5,5) # Probability that a randomly choosen person is obese
 # or
-pnorm(30,27.5,6,lower.tail=FALSE)
+pnorm(30,27.5,5,lower.tail=FALSE)
 # Standardizing
-z <- (30-27.5)/6
+z <- (30-27.5)/5
 1-pnorm(z) 
 ```
 
 **Quantile**
+$\alpha$
 ```R
+# Example. In testing Ho in certain experiment, we get a F-statistic=6.02 that has an F-distribution with 
+# 3 and 20 d.f. in numerator and denominator, respectively. Reject Ho at a level 0.05 if 6.02 > Fo
+qf(0.95,3,20) # Which is smaller than 6.02 hence rejecting Ho
 
+# Example. A sample of n=50 students was taken randomly from a heights population with unknown standard deviation.
+# The sample mean=165.4 and sample sd=8.3. Null hyphotesis Ho: Mean=163
+# t-statistics
+to=
 ```
 
 **Random variable**
