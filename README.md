@@ -398,21 +398,29 @@ z <- (30-27.5)/5
 1-pnorm(z) 
 ```
 
-**Quantile**
-$\alpha$
+**Quantile**. Prefix *q*
+
+For continuous distributions, it calculates the inverse c.d.f. of the distribution.
+
+*p = F(x)*
+*x = F<sup>-1</sup>(p)*
+
 ```R
 # Example. In testing Ho in certain experiment, we get a F-statistic=6.02 that has an F-distribution with 
-# 3 and 20 d.f. in numerator and denominator, respectively. Reject Ho at a level 0.05 if 6.02 > Fo
+# 3 and 20 d.f. in numerator and denominator, respectively. Reject Ho at a level 0.05 if 6.02 > qF(0.05,3,20)
 qf(0.95,3,20) # Which is smaller than 6.02 hence rejecting Ho
 
 # Example. A sample of n=50 students was taken randomly from a heights population with unknown standard deviation.
-# The sample mean=165.4 and sample sd=8.3. Null hyphotesis Ho: Mean=163
-# t-statistics
-to=
+# The sample mean=165.4 and sample sd=8.3. Null hyphotesis Ho: Mean=163. Reject Ho at a level 0.05 if t0 > qt(0.05,49)
+to=(165.4-163)/(8.3/sqrt(50)) # t-statistics
+qt(0.95,49) # 1.67 is smaller than t0=2.04 thus Ho is rejected.
 ```
 
-**Random variable**
+**Random variable**. Prefix *r*
+
+ Simulates random variables having a specified distribution with given parameters
 ```R
+
 
 ```
 
