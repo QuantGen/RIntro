@@ -400,10 +400,7 @@ z <- (30-27.5)/5
 
 **Quantile**. Prefix *q*
 
-For continuous distributions, it calculates the inverse c.d.f. of the distribution.
-
-*p = F(x)*
-*x = F<sup>-1</sup>(p)*
+For continuous distributions, it calculates the inverse c.d.f. of the distribution, *x = F<sup>-1</sup>(p)* where *p = F(x)*.
 
 ```R
 # Example. In testing Ho in certain experiment, we get a F-statistic=6.02 that has an F-distribution with 
@@ -416,12 +413,22 @@ to=(165.4-163)/(8.3/sqrt(50)) # t-statistics
 qt(0.95,49) # 1.67 is smaller than t0=2.04 thus Ho is rejected.
 ```
 
+For discrete distribution, which have a step c.d.f an thus not invertible, the quantile is defined as the smallest value *x* such that *F(x)>=p*, where *F* is the distribution function (c.d.f). 
+```R
+# In our EPI class example, P(X<=3)=0.879, P(X<=4)=0.967 and P(X<=5)=0.994, 
+# so the smallest 'x' such as P(X<=x)>=0.9  is 4
+qbinom(0.9,10,0.2)
+```
+
 **Random variable**. Prefix *r*
 
- Simulates random variables having a specified distribution with given parameters
+Simulates random variables having a specified distribution with given parameters.
 ```R
-
-
+x1 <- rnorm(10000,10,2.2)   # draw 10,000 samples from a normal distribution with mean=10 and sd=2.2
+x2 <- rnorm(10000,11.5,3.5)   # draw 10,000 samples from a normal distribution with mean=11.5 and sd=3.5
+plot(density(x1),ylab="Density",col="red")
+lines(density(x2),col="blue")
+legend("topright",legend=c("mean=10, sd=2.2","mean=11.5, sd=3.5"),col=c("red","blue"),pch=20)
 ```
 
 [Back to Outline](#Outline)
