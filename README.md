@@ -357,25 +357,31 @@ Now that the package is installed you can load it into your environment.
 ### Distributions
 Package **stats** already included in R contains functions for *probability function*, *cumulative distribution function*, *quantile function* and *random variable generation* for many probability distributions. Functions consists of a prefix followed by the root name of the distribution.
 
-** Probability function **. Prefix *p*
+**Probability function**. Prefix *p*
+
 Calculates the probability density function (p.d.f) for continuos distributions, *f(x)*, and the probability mass function (p.m.f) for discrete distributions, *f(x)=P(X=x)*.
 
 ```R
+#Suppose there are ten multiple choice questions in an EPI class exam. Each question has five possible answers,
+#and only one of them is correct. One fails the course if she/he gets fewer than 8 correct answers. 
+#Find the probability of passing the course if the student attempts to answer every question at random. 
+dbinom(8,10,0.2)+dbinom(9,10,0.2)+dbinom(10,10,0.2)
 ```
-** Cumulative distribution **. Prefix *p*
+**Cumulative distribution**. Prefix *p*
 Calculates the cummulative distribution function (c.d.f.) for the random variable *X*
+
 *F(x) = P(X <= x)* 
 ```R
 pnorm(27.4,30,10) # P(X <= 27.4) when X is normal with mean 30 and standard deviation 10. 
 pchisq(8.2,12) # P(X <= 8.2) when X is chi-square with 12 d.f. 
 ```
 
-** Quantile **
+**Quantile**
 ```R
 
 ```
 
-** Random variable **
+**Random variable**
 ```R
 
 ```
