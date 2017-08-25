@@ -357,22 +357,23 @@ Now that the package is installed you can load it into your environment.
 ### Distributions
 Package **stats** already included in R contains functions for *probability function*, *cumulative distribution function*, *quantile function* and *random variable generation* for many probability distributions. Functions consists of a prefix followed by the root name of the distribution.
 
-**Probability function**. Prefix *p*
+**Probability function**. Prefix *d*
 
 Calculates the probability density function (p.d.f) for continuos distributions, *f(x)*, and the probability mass function (p.m.f) for discrete distributions, *f(x)=P(X=x)*.
 
 ```R
 # For a discrete distribution (e.g.,binomial distribution)
-# Suppose there are ten multiple choice questions in an EPI class exam. Each question has five possible answers,
-# and only one of them is correct. One fails the course if she/he gets fewer than 6 correct answers. 
-# Find the probability of passing the course if the student attempts to answer every question at random. 
+# Example. Suppose there are 10 multiple choice questions in an EPI class exam. Each question has 5 possible answers,
+# and only one of them is correct. The student fails the course if she/he gets fewer than 6 correct answers. 
+# The probability of passing the course if the student attempts to answer every question at random is
 
 dbinom(6,10,0.2)+dbinom(7,10,0.2)+dbinom(8,10,0.2)+dbinom(9,10,0.2)+dbinom(10,10,0.2)
 
 # For a continuous distribution (e.g.,normal distribution)
-x <- seq(4,16,length=1000)
-y <- dnorm(x,mean=10, sd=2)
-plot(x,y,type="l",main='Normal distribution with mean=10 and sd=2',ylab='f(x)')
+# Example. In a certain population, BMI has a normal distribution with mean=29 and sd=6
+x <- seq(12.5,42.5,length=1000)
+y <- dnorm(x,mean=27.5, sd=5)
+plot(x,y,type="l",main='Normal distribution with mean=27.5 and sd=5',ylab='f(x)')
 ```
 **Cumulative distribution**. Prefix *p*
 
@@ -383,10 +384,18 @@ Calculates the cumulative distribution function (c.d.f.) for the random variable
 # In our EPI class example, the probability of failing the course is P(X<6)=P(X<=5)
 pbinom(5,10,0.2)
 # Thus the probability of passing is 1-P(X<=5)
-# 1 - pbinom(5,10,0.2)
+1 - pbinom(5,10,0.2)
+# or
+pbinom(5,10,0.2,lower.tail=FALSE)
 
-pnorm(27.4,30,10) # P(X <= 27.4) when X is normal with mean 30 and standard deviation 10. 
-pchisq(8.2,12) # P(X <= 8.2) when X is chi-square with 12 d.f. 
+# Normal distribution
+# In our BMI example, a person is declared obese if her/his BMI is greater or equal than 30.
+1-pnorm(30,27.5,6) # Probability that a randomly choosen person is obese
+# or
+pnorm(30,27.5,6,lower.tail=FALSE)
+# Standardizing
+z <- (30-27.5)/6
+1-pnorm(z) 
 ```
 
 **Quantile**
