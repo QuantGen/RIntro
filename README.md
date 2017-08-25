@@ -362,16 +362,29 @@ Package **stats** already included in R contains functions for *probability func
 Calculates the probability density function (p.d.f) for continuos distributions, *f(x)*, and the probability mass function (p.m.f) for discrete distributions, *f(x)=P(X=x)*.
 
 ```R
-#Suppose there are ten multiple choice questions in an EPI class exam. Each question has five possible answers,
-#and only one of them is correct. One fails the course if she/he gets fewer than 8 correct answers. 
-#Find the probability of passing the course if the student attempts to answer every question at random. 
-dbinom(8,10,0.2)+dbinom(9,10,0.2)+dbinom(10,10,0.2)
+# For a discrete distribution (e.g.,binomial distribution)
+# Suppose there are ten multiple choice questions in an EPI class exam. Each question has five possible answers,
+# and only one of them is correct. One fails the course if she/he gets fewer than 6 correct answers. 
+# Find the probability of passing the course if the student attempts to answer every question at random. 
+
+dbinom(6,10,0.2)+dbinom(7,10,0.2)+dbinom(8,10,0.2)+dbinom(9,10,0.2)+dbinom(10,10,0.2)
+
+# For a continuous distribution (e.g.,normal distribution)
+x <- seq(4,16,length=1000)
+y <- dnorm(x,mean=10, sd=2)
+plot(x,y,type="l",main='Normal distribution with mean=10 and sd=2',ylab='f(x)')
 ```
 **Cumulative distribution**. Prefix *p*
-Calculates the cummulative distribution function (c.d.f.) for the random variable *X*
+
+Calculates the cumulative distribution function (c.d.f.) for the random variable *X*
 
 *F(x) = P(X <= x)* 
 ```R
+# In our EPI class example, the probability of failing the course is P(X<6)=P(X<=5)
+pbinom(5,10,0.2)
+# Thus the probability of passing is 1-P(X<=5)
+# 1 - pbinom(5,10,0.2)
+
 pnorm(27.4,30,10) # P(X <= 27.4) when X is normal with mean 30 and standard deviation 10. 
 pchisq(8.2,12) # P(X <= 8.2) when X is chi-square with 12 d.f. 
 ```
