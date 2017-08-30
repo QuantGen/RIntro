@@ -371,8 +371,8 @@ dbinom(6,10,0.2)+dbinom(7,10,0.2)+dbinom(8,10,0.2)+dbinom(9,10,0.2)+dbinom(10,10
 
 # For a continuous distribution (e.g.,normal distribution)
 # Example. In a certain population, BMI has a normal distribution with mean=27.5 and sd=5
-x <- rnorm(mean=27.5,sd=5,n=1000) # draw 1000 samples from a nomral distribution with the desired mean and standard deviation
-y <- dnorm(x,mean=27.5, sd=5) # evaluates the desnity function for the values of x drawn.
+x <- seq(12.5,42.5,n=1000) # creates a sequence of values between 12.5 and 42.5.
+y <- dnorm(x,mean=27.5, sd=5) # evaluates the density function for the values of x.
 plot(x,y,type="l",main='Normal distribution with mean=27.5 and sd=5',ylab='f(x)')
 ```
 **Cumulative distribution**. Prefix *p*
