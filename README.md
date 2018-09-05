@@ -357,7 +357,7 @@ Now that the package is installed you can load it into your environment.
 ### Distributions
 Package **stats** already included in R contains functions for *probability function*, *cumulative distribution function*, *quantile function* and *random variable generation* for many probability distributions. Functions consists of a prefix followed by the root name of the distribution.
 
-**Probability function**. Prefix *d*
+- **Probability function**. Prefix *d*
 
 Calculates the probability density function (p.d.f) for continuos distributions, *f(x)*, and the probability mass function (p.m.f) for discrete distributions, *f(x)=P(X=x)*.
 
@@ -375,7 +375,8 @@ x <- seq(12.5,42.5,length=1000) # creates a sequence of values between 12.5 and 
 y <- dnorm(x,mean=27.5, sd=5) # evaluates the density function for the values of x.
 plot(x,y,type="l",main='Normal distribution with mean=27.5 and sd=5',ylab='f(x)')
 ```
-**Cumulative distribution**. Prefix *p*
+
+- **Cumulative distribution**. Prefix *p*
 
 Calculates the cumulative distribution function (c.d.f.) for the random variable *X*
 
@@ -406,7 +407,7 @@ We select plants that are 6.0 feet or taller to intercross to form a new generat
 Whis is the proportion of selected individuals?
 Which is the selection differential?
 
-**Quantile**. Prefix *q*
+- **Quantile**. Prefix *q*
 
 For continuous distributions, it calculates the inverse c.d.f. of the distribution, *x = F<sup>-1</sup>(p)* where *p = F(x)*.
 
@@ -428,7 +429,7 @@ For discrete distribution, which have a step c.d.f an thus not invertible, the q
 qbinom(0.9,10,0.2)
 ```
 
-**Random variable**. Prefix *r*
+- **Random variable**. Prefix *r*
 
 Simulates random variables having a specified distribution with given parameters.
 ```R
