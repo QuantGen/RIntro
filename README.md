@@ -398,6 +398,14 @@ z <- (30-27.5)/5
 1-pnorm(z) 
 ```
 
+*Special problem*
+![](https://github.com/MarcooLopez/Miscelaneous/blob/master/RS1.png "Response to Selection")
+
+In a certain population of plants, the height of the plant has a Normal distribution with mean=5.3 feet and a sd=0.71.
+We select plants that are 6.0 feet or taller to intercross to form a new generation of plants. 
+Whis is the proportion of selected individuals?
+Which is the selection differential?
+
 **Quantile**. Prefix *q*
 
 For continuous distributions, it calculates the inverse c.d.f. of the distribution, *x = F<sup>-1</sup>(p)* where *p = F(x)*.
