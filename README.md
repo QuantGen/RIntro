@@ -145,6 +145,7 @@ A matrix is a two dimensional array that holds values of the same type (e.g., nu
 
  
 ```
+[More on Linear Algebra in R](https://github.com/gdlc/STAT_COMP/blob/master/LinearAlgebra.md)
 
 [Back to Outline](#Outline)
 
