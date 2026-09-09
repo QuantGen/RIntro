@@ -241,15 +241,6 @@ In programing conditional statements can be used to execute one type of code or 
    print("Y is greater than X!")
  }
 
- ## IF-ELSE
- x=3
- if(x>y){
-   print("X is greater than Y!")
- }else{
-   print("Y is greater than X!")
- }
- 
- 
  ## We can evaluate multiple conditions at a time by nesting if statments or by evaluating them jointly
  
  x=TRUE
